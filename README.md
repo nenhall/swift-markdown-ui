@@ -3,7 +3,7 @@
 版本号结构：2.3.10x, 2.3.1 代表 `gonzalezreal/swift-markdown-ui` 的版本号，0x 是此仓库的修改的版本号
 
 ```swift
-.package(url: "https://github.com/nenhall/swift-markdown-ui", from: "2.3.102")
+.package(url: "https://github.com/nenhall/swift-markdown-ui", from: "2.3.101")
 ```
 
 Include `"MarkdownUI"` as a dependency for your executable target:
