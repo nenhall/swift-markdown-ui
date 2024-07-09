@@ -41,7 +41,6 @@ let package = Package(
         name: "MarkdownUI2",
         exclude: [
             "Resources/main.js.LICENSE.txt",
-            "MarkdownUI2/UITest.swift"
         ],
         resources: [
             .copy("Resources/MarkdownView.bundle/styled.html"),
@@ -54,6 +53,7 @@ let package = Package(
       name: "MarkdownUITests",
       dependencies: [
         "MarkdownUI",
+        "MarkdownUI2",
         .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
       ],
       exclude: ["__Snapshots__"]

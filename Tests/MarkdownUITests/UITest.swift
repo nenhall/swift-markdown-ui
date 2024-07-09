@@ -6,6 +6,7 @@
 //
 
 import MarkdownUI
+import MarkdownUI2
 import SwiftUI
 
 let markdown =

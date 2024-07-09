@@ -5,6 +5,8 @@ public typealias UIViewRepresentable = NSViewRepresentable
 public typealias UIViewRepresentableContext = NSViewRepresentableContext
 #endif
 
+//@available(iOS, deprecated: 15.0, message: "Use MarkdownUI.Markdown(...) on iOS 15.0 and later")
+//@available(macOS, deprecated: 12.0, message: "Use MarkdownUI.Markdown(...) on macOS 12.0 and later")
 public struct MarkdownUI2: UIViewRepresentable {
 #if os(macOS)
     private let scrollView: NSScrollView = .init()
