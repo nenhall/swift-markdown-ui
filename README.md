@@ -12,7 +12,7 @@ Include `"MarkdownUI"` as a dependency for your executable target:
 .target(name: "<target>", dependencies: [
   .product(name: "MarkdownUI", package: "swift-markdown-ui")
 ]),
-
+```
 
 # Example
 ``` swift
