@@ -1,3 +1,16 @@
+基于 gonzalezreal/swift-markdown-ui，增加支持在 iOS 14 和 macOS 11.0 工程编译
+```swift
+.package(url: "https://github.com/nenhall/swift-markdown-ui", from: "2.3.1.01")
+```
+
+Include `"MarkdownUI"` as a dependency for your executable target:
+
+```swift
+.target(name: "<target>", dependencies: [
+  .product(name: "MarkdownUI", package: "swift-markdown-ui")
+]),
+```
+
 # MarkdownUI
 [![CI](https://github.com/gonzalezreal/MarkdownUI/workflows/CI/badge.svg)](https://github.com/gonzalezreal/MarkdownUI/actions?query=workflow%3ACI)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fgonzalezreal%2Fswift-markdown-ui%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/gonzalezreal/swift-markdown-ui)
