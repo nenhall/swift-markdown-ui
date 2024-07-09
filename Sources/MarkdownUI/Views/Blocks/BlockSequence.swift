@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
 struct BlockSequence<Data, Content>: View
 where
   Data: Sequence,
@@ -50,6 +51,7 @@ where
   }
 }
 
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
 extension BlockSequence where Data == [BlockNode], Content == BlockNode {
   init(_ blocks: [BlockNode]) {
     self.init(blocks) { $1 }

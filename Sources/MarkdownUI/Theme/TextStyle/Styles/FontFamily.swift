@@ -1,6 +1,7 @@
 import Foundation
 
 /// A text style that sets the text font family.
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
 public struct FontFamily: TextStyle {
   private let family: FontProperties.Family
 

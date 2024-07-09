@@ -182,6 +182,7 @@ public struct FontProperties: Hashable {
   }
 }
 
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
 extension FontProperties: TextStyle {
   public func _collectAttributes(in attributes: inout AttributeContainer) {
     attributes.fontProperties = self

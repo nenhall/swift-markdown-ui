@@ -16,6 +16,7 @@ extension Color {
   /// - Parameters:
   ///   - light: The light appearance color value.
   ///   - dark: The dark appearance color value.
+  @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
   public init(light: @escaping @autoclosure () -> Color, dark: @escaping @autoclosure () -> Color) {
     #if os(watchOS)
       self = dark()

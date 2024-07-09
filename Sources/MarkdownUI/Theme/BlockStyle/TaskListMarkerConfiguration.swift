@@ -9,6 +9,7 @@ public struct TaskListMarkerConfiguration {
   public let isCompleted: Bool
 }
 
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
 extension BlockStyle where Configuration == TaskListMarkerConfiguration {
   /// A task list marker style that displays a checkmark inside a square if the item is completed
   /// or a hollow square if the item is not completed.

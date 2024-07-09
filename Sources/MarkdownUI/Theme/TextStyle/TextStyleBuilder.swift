@@ -1,6 +1,7 @@
 import Foundation
 
 /// A result builder you can use to compose text styles.
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
 @resultBuilder public enum TextStyleBuilder {
   public static func buildBlock() -> some TextStyle {
     EmptyTextStyle()
@@ -73,6 +74,7 @@ import Foundation
   }
 }
 
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
 extension Optional: TextStyle where Wrapped: TextStyle {
   public func _collectAttributes(in attributes: inout AttributeContainer) {
     self?._collectAttributes(in: &attributes)

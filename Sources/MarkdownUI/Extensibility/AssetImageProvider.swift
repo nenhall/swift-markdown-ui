@@ -50,6 +50,7 @@ public struct AssetImageProvider: ImageProvider {
   }
 }
 
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8, *)
 extension ImageProvider where Self == AssetImageProvider {
   /// An image provider that loads images from resources located in an app or a module.
   ///
