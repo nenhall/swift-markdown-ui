@@ -15,6 +15,10 @@ let package = Package(
     .library(
       name: "MarkdownUI",
       targets: ["MarkdownUI"]
+    ),
+    .library(
+      name: "MarkdownUI2",
+      targets: ["MarkdownUI2"]
     )
   ],
   dependencies: [
@@ -32,6 +36,18 @@ let package = Package(
         "cmark-gfm",
         .product(name: "NetworkImage", package: "NetworkImage"),
       ]
+    ),
+    .target(
+        name: "MarkdownUI2",
+        exclude: [
+            "Resources/main.js.LICENSE.txt"
+        ],
+        resources: [
+            .copy("Resources/MarkdownView.bundle/styled.html"),
+            .copy("Resources/MarkdownView.bundle/non_styled.html"),
+            .copy("Resources/MarkdownView.bundle/main.js"),
+            .copy("Resources/MarkdownView.bundle/main.css")
+        ]
     ),
     .testTarget(
       name: "MarkdownUITests",

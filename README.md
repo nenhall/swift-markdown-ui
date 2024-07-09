@@ -9,6 +9,29 @@ Include `"MarkdownUI"` as a dependency for your executable target:
 .target(name: "<target>", dependencies: [
   .product(name: "MarkdownUI", package: "swift-markdown-ui")
 ]),
+
+
+# Example
+``` swift
+import MarkdownUI
+import MarkdownUI2
+
+struct CodeView: View {
+    @State var content: String
+
+    var body: some View {
+        contentView()
+    }
+    
+    func contentView() -> some View {
+        if #available(iOS 15, macOS 12, *) {
+            return CodeSyntaxHighlightView(content: content)
+        } else {
+            return MarkdownUI2(body: content)
+                .background(Color.gray01)
+        }
+    }
+}
 ```
 
 # MarkdownUI
