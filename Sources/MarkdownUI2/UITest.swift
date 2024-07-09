@@ -5,6 +5,7 @@
 //  Created by dadi on 2024/7/8.
 //
 
+import MarkdownUI
 import SwiftUI
 
 let markdown =
@@ -23,11 +24,22 @@ let markdown =
     """
 
 struct UITest: View {
+    @State var content: String
+
     var body: some View {
-        MarkdownUI(body: markdown)
+        contentView()
+    }
+
+    func contentView() -> some View {
+        if #available(iOS 15, macOS 12, *) {
+            return Markdown(self.content)
+        } else {
+            return MarkdownUI2(body: content)
+                .background(Color.gray.opacity(0.2))
+        }
     }
 }
 
 #Preview {
-    UITest()
+    UITest(content: markdown)
 }

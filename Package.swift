@@ -40,7 +40,8 @@ let package = Package(
     .target(
         name: "MarkdownUI2",
         exclude: [
-            "Resources/main.js.LICENSE.txt"
+            "Resources/main.js.LICENSE.txt",
+            "MarkdownUI2/UITest.swift"
         ],
         resources: [
             .copy("Resources/MarkdownView.bundle/styled.html"),
