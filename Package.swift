@@ -15,10 +15,6 @@ let package = Package(
     .library(
       name: "MarkdownUI",
       targets: ["MarkdownUI"]
-    ),
-    .library(
-      name: "MarkdownUI2",
-      targets: ["MarkdownUI2"]
     )
   ],
   dependencies: [
